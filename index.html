@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Bijak Gunakan AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .scrollbar-hide {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    /* Floating animation for poster */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .poster-container {
+      animation: float 3s ease-in-out infinite;
+    }
+
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-black via-gray-900 to-blue-950 text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 bg-black/70 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+      <a href="#home">
+        <img src="public/logo robot.png" alt="Logo" class="h-12">
+      </a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#latar" class="hover:text-sky-400 transition">Latar Belakang</a>
+        <a href="#lintas" class="hover:text-sky-400 transition">Lintas Makna</a>
+        <a href="#aksi" class="hover:text-sky-400 transition">Aksi Nyata</a>
+        <a href="#kata" class="hover:text-sky-400 transition">Kata Mereka</a>
+        <a href="#tim" class="hover:text-sky-400 transition">Tim</a>
+        <a href="#kontak" class="hover:text-sky-400 transition">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-20 relative overflow-hidden">
+    <!-- Background gradient overlay -->
+     <div class="absolute inset-0" style="background-image: url('public/ASET\ LIDM.jpg\ FHJGJHGJH-01-01-01.jpg'); background-size: cover; background-position: center; opacity: 0.1;"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-cyan-900/20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left content -->
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <h1
+              class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+              Generasi <i>COPAS</i>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide">
+              Menuju Indonesia CEMAS
+            </h2>
+          </div>
+
+          <div class="space-y-6">
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+              Aksi ini di dedikasikan agar Dunia Pendidikan Melek Terhadap Dampak Penggunaan Artificial Intelligence
+              yang digunakan secara tidak Bijak dan semena - mena. </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 border border-gray-700">
+                <h3 class="font-semibold text-cyan-400 mb-2">🎯 Misi Kami</h3>
+                <p class="text-sm text-gray-300">Mendorong literasi digital yang bertanggung jawab di dunia pendidikan
+                  Indonesia</p>
+              </div>
+              <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 border border-gray-700">
+                <h3 class="font-semibold text-purple-400 mb-2">📊 Dampak</h3>
+                <p class="text-sm text-gray-300">Mengurangi risiko penyalahgunaan AI dalam proses pembelajaran</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced grafik section -->
+          <div class="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-bold text-white">📈 (Data Survei Tirto & Jakpat – 1.294 responden)</h3>
+              <span class="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded-full">2023</span>
+            </div>
+            <canvas id="chartTirto" class="w-full rounded-xl shadow-lg mb-3"></canvas>
+            <p class="text-sm text-gray-300 text-center">Proporsi Tugas yang Dibuat Menggunakan AI oleh pelajar
+          </div>
+        </div>
+
+        <!-- Right content -->
+        <div class="space-y-6">
+          <!-- Enhanced poster section -->
+          <div class="relative group poster-container">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000">
+            </div>
+            <div class="relative bg-gray-900 rounded-2xl p-1">
+              <div class="bg-gray-800 rounded-xl overflow-hidden">
+                <img src="public/ASET LIDM.jpg FHJGJHGJH-01-01-01.jpg" alt="Poster Bijak Gunakan AI" class="w-full h-auto rounded-xl poster-img">
+                <!-- <div class="p-4 text-center">
+                  <h4 class="font-semibold text-white mb-2">Poster Pengingat</h4>
+                  <p class="text-sm text-gray-400">Simbol perjuangan melawan penyalahgunaan AI</p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to action buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="flex-1 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+              <a href="public/ASET LIDM.jpg FHJGJHGJH-01-01-01.jpg" download class="absolute inset-0 z-10" title="Unduh Poster"></a>
+              <span class="flex items-center justify-center gap-2"> 
+                📥 Unduh Poster
+              </span>
+            </button>
+            <a href="https://tirto.id/penggunaan-ai-di-dunia-pendidikan-makin-marak-dan-merata-gZax" target="_blank"
+              class="flex-1 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 inline-block">
+              <span class="flex items-center justify-center gap-2">
+                📖 Pelajari Lebih Lanjut
+              </span>
+            </a>
+          </div>
+
+          <!-- Stats section -->
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 border border-gray-700">
+              <div class="text-2xl font-bold text-cyan-400">94,4%</div>
+              <div class="text-xs text-gray-400">Pelajar Pernah Menggunakan AI</div>
+            </div>
+            <div class="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 border border-gray-700">
+              <div class="text-2xl font-bold text-purple-400">18</div>
+              <div class="text-xs text-gray-400">Total Pelajar Dalam Survei</div>
+            </div>
+            <div class="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 border border-gray-700">
+              <div class="text-2xl font-bold text-pink-400">2024</div>
+              <div class="text-xs text-gray-400">Tahun Survei</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Latar Belakang -->
+<section id="latar" class="py-20 relative overflow-hidden">
+  <!-- Background decorative -->
+  <div class="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-gray-800/30 to-gray-900/40"></div>
+  <div class="relative max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Column: Text -->
+      <div>
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          LATAR BELAKANG
+        </h2>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+          Penggunaan <b><i>Artificial Intelligence (AI)</i></b> yang semakin meluas di kalangan pelajar membawa dampak ganda bagi dunia pendidikan. 
+          Di satu sisi, <i>AI</i> mempermudah akses informasi, mempercepat penyelesaian tugas, dan mendukung personalisasi pembelajaran. 
+          Namun, kebiasaan <b>“COPAS”</b> tanpa kajian mendalam justru mengikis budaya literasi, melemahkan kemampuan berpikir kritis, 
+          serta menumbuhkan ketergantungan berlebihan pada teknologi. 
+        </p>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+          Kondisi ini menjadi kekhawatiran serius karena generasi muda adalah penentu kualitas sumber daya manusia menuju Indonesia Emas 2045. 
+          Oleh karena itu, gerakan digital <b>“Generasi <i>COPAS</i> Menuju Indonesia CEMAS”</b> hadir sebagai kampanye edukasi untuk mendorong 
+          penggunaan AI yang bijak, meningkatkan literasi, serta menjaga integritas akademik demi terciptanya pendidikan yang berkualitas dan berkelanjutan.
+        </p>
+        
+        <!-- Supporting CTA -->
+        <a href="#lintas" 
+          class="inline-block px-6 py-3 mt-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl 
+                 hover:from-cyan-600 hover:to-blue-600 transition transform hover:scale-105 shadow-lg">
+          📖 Pelajari Lanjut
+        </a>
+      </div>
+
+      <!-- Right Column: Visual & Data -->
+      <div class="space-y-6">
+        <!-- Illustration / Placeholder -->
+        <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 shadow-xl">
+          <canvas id="infografisChart" class="rounded-xl mb-4"></canvas>
+          <p class="text-sm text-gray-400 text-center">Infografis: Tren penggunaan AI di dunia pendidikan</p>
+        </div>
+
+        <!-- Key Stats -->
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-gray-800/60 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+            <div class="text-3xl font-bold text-cyan-400">94,4%</div>
+            <p class="text-sm text-gray-400">Pelajar Indonesia pernah memakai AI</p>
+          </div>
+          <div class="bg-gray-800/60 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+            <div class="text-3xl font-bold text-purple-400">68%</div>
+            <p class="text-sm text-gray-400">Berisiko melakukan plagiarisme</p>
+          </div>
+        </div>
+
+        <!-- Quote / Placeholder Insight -->
+        <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-6 border border-cyan-500/30">
+          <!-- <blockquote class="text-gray-200 italic text-lg">
+            "Jika generasi muda hanya mengandalkan <i>COPAS</i>, maka masa depan literasi kritis akan hilang."
+          </blockquote> -->
+          <blockquote class="text-gray-200 italic text-lg">
+            ""
+          </blockquote>
+          <p class="text-sm text-gray-400 mt-3">— Hasil Diskusi Akademisi, 2023</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Highlight Section -->
+<section id="lintas" class="py-20 relative overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-cyan-900/10 to-blue-900/10"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2
+          class="text-4xl md:text-5xl font-black uppercase bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-4">
+          Lintas Makna
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Memahami dampak AI dalam dunia pendidikan dari berbagai perspektif
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-700/50 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="space-y-8">
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">🎯</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">Membangun Kesadaran</h3>
+                  <p class="text-gray-300">Mengajak pelajar memahami dampak negatif penggunaan AI secara instan dan tanpa literasi.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">📖</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">Menumbuhkan Literasi</h3>
+                  <p class="text-gray-300">Mendorong generasi muda untuk tetap membaca, berpikir kritis, dan belajar secara autentik. 
+
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">🤝</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">Penggunaan AI Bijak</h3>
+                  <p class="text-gray-300">Mengampanyekan pemanfaatan AI sebagai alat bantu, bukan pengganti proses belajar.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">🌟</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">Menuju Indonesia Emas 2045</h3>
+                  <p class="text-gray-300">Mendukung terciptanya generasi cerdas, kreatif, dan berintegritas demi pendidikan berkualitas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="space-y-6">
+            <div class="bg-gray-700/30 rounded-2xl p-6 border border-gray-600">
+              <h3 class="text-xl font-bold text-white mb-4">Dampak Negatif penyalahgunaan Penggunaan AI</h3>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                  <span>Memudarnya budaya literasi siswa</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
+                  <span>Ketergantungan berlebihan pada teknologi</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                  <span>Menurunnya kemampuan berpikir analitik dan kritis siswa</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                  <span>Persiapan siswa menghadapi dunia kerja yang kurang memadai</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-700/50 rounded-2xl p-6 border border-gray-600">
+              <h4 class="font-bold text-white mb-4">📊 Statistik Penting Menurut Artsmart.ai</h4>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-cyan-400">95%</div>
+                  <div class="text-sm text-gray-400">Siswa diseluruh dunia menggunakan AI saat Ujian</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-purple-400">68%</div>
+                  <div class="text-sm text-gray-400">Risiko plagiarisme</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+            <a href="https://artsmart.ai/blog/ai-plagiarism-statistics/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 inline-block">
+              <span class="flex items-center justify-center gap-2">
+                📖 Pelajari Lebih Detail
+              </span>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aksi Nyata Section -->
+  <section id="aksi" class="py-20 max-w-7xl mx-auto px-6">
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2
+          class="text-4xl md:text-5xl font-black uppercase bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-4">
+          Aksi Nyata
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Kegiatan yang telah terlaksana untuk mewujudkan SDGS Poin 4
+        </p>
+      </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Gallery cards -->
+      <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+        <img src="public/mading.png" alt="Aksi 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-white font-semibold mb-2">Kampanye Poster</h3>
+          <p class="text-gray-300 text-sm">Menyebarkan poster pengingat bahaya penyalahgunaan AI di sekolah-sekolah.</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+        <img src="public/smk4.png" alt="Aksi 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-white font-semibold mb-2">Riset Lapangan</h3>
+          <p class="text-gray-300 text-sm">Riset lapangan untuk memahami dampak AI pada sekolah.</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+        <img src="public/smk5.png" alt="Aksi 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-white font-semibold mb-2">Riset Lapangan</h3>
+          <p class="text-gray-300 text-sm">Riset lapangan untuk memahami dampak AI pada sekolah.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kata Mereka Section -->
+  <section id="kata" class="py-20 relative overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-cyan-900/20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2
+          class="text-4xl md:text-5xl font-black uppercase bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-4">
+          Kata Mereka
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Pendapat Mereka Tentang Gerakan <b><i>Bijak Gunakan AI</i></b> ini
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Navigation buttons -->
+        <button id="left-btn"
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-4 bg-gray-800/80 backdrop-blur-sm rounded-full hover:bg-gray-700/80 transition-all duration-300 shadow-lg hover:scale-110">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+
+        <div id="testimonials-container" class="flex overflow-x-auto scroll-smooth gap-8 w-full md:w-[1030px] mx-auto scrollbar-hide">
+        
+          <!-- Testimonial 2 -->
+          <div
+            class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 flex-shrink-0 w-full md:w-80">
+            <div class="flex items-center mb-6">
+            
+              <div class="ml-4">
+                <h4 class="font-bold text-white">Ibu Ambar</h4>
+                <p class="text-sm text-purple-400">Guru SMKN 4 Malang</p>
+              </div>
+            </div>
+            <blockquote class="text-gray-300 italic">
+              "Terus semangat semoga membuahkan hasil yang bagus"
+            </blockquote>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 flex-shrink-0 w-full md:w-80">
+            <div class="flex items-center mb-6">
+            
+              <div class="ml-4">
+                <h4 class="font-bold text-white">Bapak Bashit</h4>
+                <p class="text-sm text-purple-400">Guru SMKN 5 Malang</p>
+              </div>
+            </div>
+            <blockquote class="text-gray-300 italic">
+              "AI sebagai tools siswa, penggunaannya sesuai dengan kesadaran diri dalam bijak menggunakan AI"
+            </blockquote>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 flex-shrink-0 w-full md:w-80">
+            <div class="flex items-center mb-6">
+            
+              <div class="ml-4">
+                <h4 class="font-bold text-white">Najwa Afifah</h4>
+                <p class="text-sm text-purple-400">Mahasiswa Fakultas Ilmu Komputer</p>
+              </div>
+            </div>
+            <blockquote class="text-gray-300 italic">
+              "Posternya mantap, semoga membawa dampak postif dalam dunia pendidikan"
+            </blockquote>
+          </div>
+
+         <!-- Testimonial 2 -->
+          <div
+            class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 flex-shrink-0 w-full md:w-80">
+            <div class="flex items-center mb-6">
+            
+              <div class="ml-4">
+                <h4 class="font-bold text-white">Dr. Okta Purnawirawan, S.Pd., M.Pd., Gr.                </h4>
+                <p class="text-sm text-purple-400">Dosen Fakultas Ilmu Komputer</p>
+              </div>
+            </div>
+            <blockquote class="text-gray-300 italic">
+              "Semoga posternya dapat menyadarkan para pelajar akan pentingnya literasi digital di era sekarang"
+            </blockquote>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <!-- <div
+            class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 flex-shrink-0 w-full md:w-80">
+            <div class="flex items-center mb-6">
+            
+              <div class="ml-4">
+                <h4 class="font-bold text-white">Najwa Afifah</h4>
+                <p class="text-sm text-purple-400">Mahasiswa Fakultas Ilmu Komputer</p>
+              </div>
+            </div>
+            <blockquote class="text-gray-300 italic">
+              "Lorem ipsum dolor sijamettttttttttt"
+            </blockquote>
+          </div> -->
+
+          <!-- Testimonial 2 -->
+          <!-- <div
+            class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 flex-shrink-0 w-full md:w-80">
+            <div class="flex items-center mb-6">
+            
+              <div class="ml-4">
+                <h4 class="font-bold text-white">Najwa Afifah</h4>
+                <p class="text-sm text-purple-400">Mahasiswa Fakultas Ilmu Komputer</p>
+              </div>
+            </div>
+            <blockquote class="text-gray-300 italic">
+              "Lorem ipsum dolor sijamettttttttttt"
+            </blockquote>
+          </div>
+        </div> -->
+
+        <button id="right-btn"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-4 bg-gray-800/80 backdrop-blur-sm rounded-full hover:bg-gray-700/80 transition-all duration-300 shadow-lg hover:scale-110">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Stats -->
+      <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto">
+        <div class="text-center bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+          <div class="text-4xl font-bold text-cyan-400 mb-2">100%</div>
+          <div class="text-gray-300">Testimoni Positif</div>
+        </div>
+        <div class="text-center bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+          <div class="text-4xl font-bold text-purple-400 mb-2">1%</div>
+          <div class="text-gray-300">Kritik</div>
+        </div>
+        <div class="text-center bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+          <div class="text-4xl font-bold text-pink-400 mb-2">95%</div>
+          <div class="text-gray-300">Saran</div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Tim Section -->
+  <section id="tim" class="py-20 relative overflow-hidden">
+    <!-- Background with image and gradient overlay -->
+    <!-- <div class="absolute inset-0" style="background-image: url('public/mole.jpg'); background-size: cover; background-position: center; opacity: 0.3;"></div> -->
+    <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-blue-900/10 to-purple-900/10"></div>
+    <!-- Clickable overlay for href -->
+    <a href="public/mole.jpg" download class="absolute inset-0 z-10" title="Download Poster"></a>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2
+          class="text-4xl md:text-5xl font-black uppercase bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+          Tim Kami
+        </h2>
+        <!-- <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Di Balik Layar <b><i>Bijak Gunakan AI</i></b>
+        </p> -->
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Dibalik Layar Aksi <b><i>Bijak Gunakan AI</i></b>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Team Member 1 -->
+        <div
+          class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 text-center">
+          <div class="relative mb-6">
+            <img src="public/nanda.jpeg" alt="Ananda Ayu Rahmadani"
+              class="w-32 h-32 rounded-full object-cover mx-auto border-4 border-cyan-400 group-hover:border-cyan-300 transition-colors duration-300">
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Ananda Ayu Rahmadani</h3>
+          <p class="text-cyan-400 font-medium mb-4">Fakultas Ilmu Komputer</p>
+          <p class="text-gray-300 text-sm mb-4">Tim Penglaris CW</p>
+
+        </div>
+
+        <!-- Team Member 2 -->
+        <div
+          class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 text-center">
+          <div class="relative mb-6">
+            <img src="public/selva.jpeg" alt="Selva Aleyda Ashwad"
+              class="w-32 h-32 rounded-full object-cover mx-auto border-4 border-purple-400 group-hover:border-purple-300 transition-colors duration-300">
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Selva Aleyda Ashwad</h3>
+          <p class="text-purple-400 font-medium mb-4">Fakultas Ilmu Budaya</p>
+          <p class="text-gray-300 text-sm mb-4">Tim Penglaris CW</p>
+
+        </div>
+
+        <!-- Team Member 3 -->
+        <div
+          class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 text-center">
+          <div class="relative mb-6">
+            <img src="public/hasan.jpeg" alt="Muhammad Hasan Fadhilah"
+              class="w-32 h-32 rounded-full object-cover mx-auto border-4 border-pink-400 group-hover:border-pink-300 transition-colors duration-300">
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Muhammad Hasan Fadhilah</h3>
+          <p class="text-pink-400 font-medium mb-4">Fakultas Vokasi</p>
+          <p class="text-gray-300 text-sm mb-4">Tim Penglaris CW</p>
+
+        </div>
+
+
+      </div>
+
+      <!-- Join Team CTA -->
+      <!-- <div class="text-center mt-16">
+        <div class="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 max-w-2xl mx-auto">
+          <h3 class="text-2xl font-bold text-white mb-4">Bergabung dengan Tim Kami</h3>
+          <p class="text-gray-300 mb-6">Kami selalu mencari talenta terbaik untuk bergabung dalam misi besar ini</p>
+          <button class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+            <span class="flex items-center justify-center gap-2">
+              📧 Kirim Lamaran
+            </span>
+          </button>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Kontak Section -->
+  <section id="kontak" class="py-20 relative overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-cyan-900/20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2
+          class="text-4xl md:text-5xl font-black uppercase bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-4">
+          Kontak & Koneksi
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Mari terhubung dan bersama-sama membangun masa depan pendidikan yang lebih baik
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50 shadow-2xl">
+          <h3 class="text-2xl font-bold text-white mb-6">Kirim Pesan</h3>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">Nama Lengkap</label>
+                <input type="text" placeholder="Masukkan nama Anda"
+                  class="w-full p-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                <input type="email" placeholder="email@contoh.com"
+                  class="w-full p-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300">
+              </div>
+            </div>
+
+            <!-- <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Subjek</label>
+              <select class="w-full p-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300">
+                <option value="" disabled selected>Pilih topik</option>
+                <option value="workshop">Informasi Workshop</option>
+                <option value="partnership">Kerjasama</option>
+                <option value="support">Dukungan</option>
+                <option value="other">Lainnya</option>
+              </select>
+            </div> -->
+
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Pesan</label>
+              <textarea rows="5" placeholder="Tulis pesan Anda di sini..."
+                class="w-full p-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 resize-none"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+              <span class="flex items-center justify-center gap-2">
+                📤 Kirim Pesan
+              </span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info & Social -->
+        <div class="space-y-8">
+          <!-- Contact Information -->
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50 shadow-2xl">
+            <h3 class="text-2xl font-bold text-white mb-6">Informasi Kontak</h3>
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">Email</h4>
+                  <p class="text-gray-300">BijakGunakanAI@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.52 3.48A11.77 11.77 0 0012 0C5.37 0 0 5.37 0 12a11.77 11.77 0 001.64 6L0 24l6-1.64A11.77 11.77 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zm-8.52 17.1a9.3 9.3 0 01-4.98-1.44l-.36-.21-3.12.84.84-3.06-.24-.36a9.3 9.3 0 01-1.44-5.04c0-5.13 4.17-9.3 9.3-9.3 2.49 0 4.83.96 6.57 2.7a9.2 9.2 0 012.7 6.57c0 5.13-4.17 9.3-9.3 9.3zm5.1-6.99c-.27-.14-1.59-.78-1.83-.87-.24-.09-.42-.14-.6.14-.18.27-.72.87-.88 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.44-.82-1.97-.22-.52-.44-.45-.6-.46-.16 0-.34 0-.52 0-.18 0-.48.07-.73.34-.24.27-.93.91-.93 2.22 0 1.31.95 2.58 1.08 2.76.14.18 1.87 2.85 4.53 3.99.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.08 1.59-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.27-.18-.57-.32z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">WhatsApp</h4>
+                  <p class="text-gray-300">+62 831-1432-5274</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">Lokasi</h4>
+                  <p class="text-gray-300">Malang, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50 shadow-2xl">
+            <h3 class="text-2xl font-bold text-white mb-6">Ikuti Kami</h3>
+            <p class="text-gray-300 mb-6">Bergabung dengan komunitas kami di media sosial</p>
+            <div class="grid grid-cols-2 gap-4">
+              <a href="https://t.me/BijakGunakanAI" target="_blank"
+                class="flex items-center space-x-3 p-4 bg-gray-700/50 rounded-xl hover:bg-gray-700/70 transition-all duration-300 group">
+                <div
+                  class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram" class="w-6 h-6">
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">Telegram</h4>
+                  <p class="text-sm text-gray-400">@BijakGunakanAI</p>
+                </div>
+              </a>
+
+              <a href="https://instagram.com/BijakGunakanAI" target="_blank"
+                class="flex items-center space-x-3 p-4 bg-gray-700/50 rounded-xl hover:bg-gray-700/70 transition-all duration-300 group">
+                <div
+                  class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram" class="w-6 h-6">
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">Instagram</h4>
+                  <p class="text-sm text-gray-400">@BijakGunakanAI</p>
+                </div>
+              </a>
+
+              <a href="#" target="_blank"
+                class="flex items-center space-x-3 p-4 bg-gray-700/50 rounded-xl hover:bg-gray-700/70 transition-all duration-300 group">
+                <div
+                  class="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/512px-X_logo_2023.svg.png" alt="X" class="w-6 h-6">
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">X</h4>
+                  <p class="text-sm text-gray-400">@BijakGunakanAI</p>
+                </div>
+              </a>
+
+              <a href="https://youtube.com/@bijakgunakanai?si=Wfu45Djj0CORPckX" target="_blank"
+                class="flex items-center space-x-3 p-4 bg-gray-700/50 rounded-xl hover:bg-gray-700/70 transition-all duration-300 group">
+                <div
+                  class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/512px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" class="w-6 h-6">
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">YouTube</h4>
+                  <p class="text-sm text-gray-400">BijakGunakanAI</p>
+                </div>
+              </a>
+            </div>
+          </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-black text-center text-gray-400 text-sm">
+   Made with ❤️ © 2025 <i>Bijak Gunakan AI</i> — Semua Hak Dilindungi
+  </footer>
+
+  <script>
+    document.getElementById('left-btn').addEventListener('click', () => {
+      document.getElementById('testimonials-container').scrollBy({left: -320, behavior: 'smooth'});
+    });
+
+    document.getElementById('right-btn').addEventListener('click', () => {
+      document.getElementById('testimonials-container').scrollBy({left: 320, behavior: 'smooth'});
+    });
+
+    // chartTirtoooo
+    const ctx = document.getElementById('chartTirto').getContext('2d');
+    const chartTirto = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Hampir 50%', 'Kurang dari 20%', '90%', 'Seluruh'],
+        datasets: [{
+          label: 'Persentase Pelajar (%)',
+          data: [51, 38.56, 9.43, 1],
+          backgroundColor: [
+            'rgba(230, 25, 265, 1)',
+            'rgba(230, 25, 265, 1)',
+            'rgba(230, 25, 265, 1)',
+            'rgba(230, 25, 265, 1)'
+          ],
+          borderColor: [
+            'rgba(230, 25, 265, 1)',
+            'rgba(230, 25, 265, 1)',
+            'rgba(230, 25, 265, 1)',
+            'rgba(230, 25, 265, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 50,
+            ticks: {
+              stepSize: 10,
+              callback: function(value) {
+                return value + '%';
+              }
+            },
+            title: {
+              display: true,
+              text: 'Persentase (%)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Frekuensi Penggunaan AI'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.parsed.y + '%';
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // Chart.js initialization for infografisChart (Multi-Line Chart)
+    const ctxInfografis = document.getElementById('infografisChart').getContext('2d');
+    const infografisChart = new Chart(ctxInfografis, {
+      type: 'line',
+      data: {
+        labels: ['2020', '2021', '2022', '2023', '2024'], // Tahun
+        datasets: [{
+          label: 'Penggunaan AI oleh Siswa (%)',
+          data: [10, 25, 45, 70, 85], // Data contoh, bisa diubah
+          borderColor: 'rgba(0, 191, 255, 1)', // Cyan
+          backgroundColor: 'rgba(0, 191, 255, 0.1)',
+          tension: 0.4,
+          fill: false
+        }, {
+          label: 'Penggunaan AI oleh Guru (%)',
+          data: [5, 15, 30, 50, 65], // Data contoh, bisa diubah
+          borderColor: 'rgba(138, 43, 226, 1)', // Purple
+          backgroundColor: 'rgba(138, 43, 226, 0.1)',
+          tension: 0.4,
+          fill: false
+        }, {
+          label: 'Adopsi AI Keseluruhan (%)',
+          data: [8, 20, 38, 60, 75], // Data contoh, bisa diubah
+          borderColor: 'rgba(255, 20, 147, 1)', // Pink
+          backgroundColor: 'rgba(255, 20, 147, 0.1)',
+          tension: 0.4,
+          fill: false
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: {
+              stepSize: 10,
+              callback: function(value) {
+                return value + '%';
+              }
+            },
+            title: {
+              display: true,
+              text: 'Persentase (%)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Tahun'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.dataset.label + ': ' + context.parsed.y + '%';
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
